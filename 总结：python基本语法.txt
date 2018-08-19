@@ -1,0 +1,235 @@
+1.字符与数字
+
+	print()
+	
+	# 字符串拼接
+	+
+		
+	title()
+	
+	upper()、lower()
+	
+	lstrip()、rstrip()、strip()
+	
+	# 乘方，3的二次方
+	3**2
+	
+	1.2
+	
+	print(2.1+3.2)
+	# 5.300000000000001，浮点型包含的小数位数可能是不确定的
+
+	print("abc"+12)
+	# 报错，需显式的将数字转为字符串，print("abc"+str(23))
+
+	3/2
+	# python2得到1，python3得到1.5
+
+	import this
+	# python之禅 
+	
+2.列表
+
+	[]
+	
+	# 最后一个
+	bicycles[-1]
+	
+	#增加
+	bicycles.append('a')
+	bicycles.insert(0, 'b')
+	
+	# 删除
+	del bicycles[0]
+	v = bicycles.pop()
+	bicycles.pop(0)
+	bicycles.remove('c')
+	# 方法remove()删除第一个指定的值，如果要删除的值在列表中出现多次，就需要循环来删除
+	
+	# 排序
+	# 永久
+	bicycles.sort()
+	# 临时
+	sorted(bicycles)
+	
+	bicycle.reverse()
+	
+	len(bicycles)
+	
+3.for循环
+	
+	# 不包括最后一个数
+	for i in range(1, 10):
+		print(i)
+	print("print onetime")
+	
+	range(1,10,2)
+	
+	# 转成列表
+	list(range(1,10,2))
+	
+	# 列表解析
+	sq = [i**2 for i in range(1, 10)]
+	
+	# 切片
+	sq[1:2]
+	sq[:2]
+	sq[1:]
+	sq[:]
+	sq[:-1]
+	
+	# 复制列表
+	a=b[:]	# 正确
+	a=b			# 错误，对a的操作等同于对b的操作
+	
+	#	不重复
+	set(bicycles)
+	
+4.元组，元素不能改变
+
+	a=(1,2,3)
+	a[0] = 4 		# 错误
+	a = [1,3,4] # 正确
+
+5.if
+	
+	if 1==0:
+		print('a')
+	elif 1==1:
+		print('b')
+	else:
+		print('c')
+		
+	# 布尔类型，首字母一定要大写
+	True
+	False
+	
+	and  or
+	
+6.字典
+
+	student={'zhangsan': 14, 'lisi': 40}
+	
+	for key, val in student.items():
+		print ('my name is ' + key + ', I\'m ' + str(val) + ' year\'s old.')
+		
+	student.items()
+	student.keys()
+	student.values()
+	
+7.用户输入
+	
+	input()
+	
+	# 字符转数字
+	int()
+	
+8.while
+
+	while True:
+	break 
+	continue
+
+9.函数
+
+	def greet_user():
+	
+	文档字符串：""""""
+	
+	def des_pet(animal_type, animal_name):
+	# 位置实参
+	des_pet('dog', 'e\'ha')
+	# 关键字实参
+	des_pet(animal_name='e\'ha', animal_type='dog')
+	
+	使用默认值时，在形参列表中必须先列出没有默认值的形参，再列出有默认值的形参
+	
+	# 传递任意数量的实参，元组
+	def make_pizza(*toppings):
+	
+	# 字典
+	def make_pizza(**toppings):
+	
+	如果要让函数接受不同类型的实参，必须在函数定义中将接纳任意数量的形参放在最后面
+		
+10.模块
+
+	# 导入模块
+	import pizza
+	pizza.make_piza()
+	
+	# 导入特定的模块
+	from pizza import make_piza
+	
+	# 指定别名
+	import pizza as p
+	from pizza import make_piza as mp
+	import
+	
+	编写函数时，应该给函数指定描述性名称，且只在其中使用小写字母和下划线（只要不是中文就不会报错）
+	
+	给形参指定默认值 时，等号两边不要有空格
+	
+	import要放在开头
+
+11.类
+
+	class Dog():
+		"""注释"""
+		def __init__(self, name, age):
+			self.name = name
+			self.age = age
+		def sit(self):
+		  print("sit")
+	my_dog = Dog("e'ha", 5)
+	print(my_dog.name)
+	my_dog.sit()
+	
+	class EHa(Dog):
+	def __init__(self, name , age):
+		super().__init__(name, age)
+		
+12.文件
+
+	# 读文件
+	with open("pi_digits.txt") as f:
+	  txt = f.read()
+	  print(txt)
+	
+	关键字 with 在不再需要访问文件后将其关闭
+	
+	readlines()
+	
+	# 写文件
+	with open("test.file", 'w') as f1:
+	  f1.write("abc")
+	  
+	模式：读模式('r')、写入模式('w')、附加模式('a')、读写模式('r+')
+				默认读模式
+				写入模式时，如果文件不存在，会自动创建
+	
+13.异常
+
+	try:
+		5/0
+	except ZeroDivisionError:
+		print("division 0")
+	except ZeroDivisionError:
+		print("file not found")
+	except:
+		pass
+	else:
+		print("Emmm..")	
+		
+	pass用于空处理，except后不能没能代码	
+		
+99.其他
+
+	不能使用 ++
+	
+	注释：#
+	
+	正确使用制表符
+	
+	split()
+	

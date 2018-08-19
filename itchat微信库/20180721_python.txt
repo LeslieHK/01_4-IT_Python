@@ -1,0 +1,38 @@
+1.os
+  import os
+  os.path.exists(tmp_path)
+  os.mkdir()
+  
+  * 路径中"\"用"\\"表示，否则后面的字符可能是转义字符
+  
+2.函数定义的上一行有@functionName修饰，当解释器读到@修饰符后，会先解析@后的内容，直接就把@下一行的函数或者类作为@后边的函数的参数，然后将返回值赋值给下一行修饰的函数对象。 
+  比如： 
+    @a 
+    @b 
+    def c(): 
+    … 
+  python会按照自下而上的顺序把各自的函数结果作为下一个函数（上面的函数）的输入，也就是a(b(c()))
+  
+3.time
+  import time
+  curr_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+  
+4.正则
+  import re
+  re.search(r"\<\!\[CDATA\[.*撤回了一条消息\]\]\>", msg['Content'])
+  
+5.错误：（J:\>pip3 install itchat）Fatal error in launcher: Unable to create process using '"'
+
+  解决：
+    python -m pip install --upgrade pip
+
+    pip3 install itchat
+  
+6.报错：SyntaxError: (unicode error) 'utf-8' codec can't decode byte 0xb4 in position 0:invalid start byte
+  
+  解决：
+    文件保存成utf-8格式
+    
+7.源码
+	官网：http://itchat.readthedocs.io/zh/latest/
+	GitHub：https://github.com/littlecodersh/ItChat

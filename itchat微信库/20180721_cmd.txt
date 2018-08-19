@@ -1,0 +1,8 @@
+1.设置变量
+  set myvar=1
+  
+2.打印变量
+	echo %myvar%
+  
+  
+  
